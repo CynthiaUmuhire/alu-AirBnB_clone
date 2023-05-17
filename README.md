@@ -1,6 +1,17 @@
 # alu-AirBnB_clone
 
-Objectives
+
+AirBnB Clone Project
+This project is aimed at building an AirBnB clone web application. It involves creating a command interpreter to manage AirBnB objects and implementing various features such as HTML/CSS templating, database storage, API, and front-end integration.
+
+Command Interpreter
+The command interpreter is a text-based interface similar to the Shell, specifically designed for managing the objects of the AirBnB project. It allows you to perform the following operations:
+
+Create a new object (e.g., User, Place)
+Retrieve an object from a file or database
+Perform operations on objects (e.g., count, compute stats)
+Update attributes of an object
+Destroy an object
 
 
 1. A command interpreter, similar to a Shell, for manipulating data without a visual interface. It is ideal for development and debugging purposes.
