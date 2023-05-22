@@ -1,19 +1,21 @@
-#!/usr/bin/python3
-"""Defines the tests for our base class's dictionary class."""
-
-
+import unittest
 from models.base_model import BaseModel
 
-my_model = BaseModel()
-my_model.name = "My_First_Model"
-my_model.my_number = 89
-print(my_model.id)
-print(my_model)
-print(type(my_model.created_at))
-print("--")
-my_model_json = my_model.to_dict()
-print(my_model_json)
-print("JSON of my_model:")
-for key in my_model_json.keys():
-    print("\t{}: ({}) - {}".format(key, type(my_model_json[key]),
-my_model_json[key]))
+
+class TestBaseModel_to_dict(unittest.TestCase):
+    def test_to_dict_return(self):
+        base_model = BaseModel()
+        base_model_dict = base_model.to_dict()
+        self.assertEqual(type(base_model_dict), dict)
+
+    def test_to_dict_values(self):
+        base_model = BaseModel()
+        base_model_dict = base_model.to_dict()
+        self.assertEqual(base_model_dict['__class__'], 'BaseModel')
+        self.assertEqual(type(base_model_dict['created_at']), str)
+        self.assertEqual(type(base_model_dict['updated_at']), str)
+        self.assertEqual(type(base_model_dict['id']), str)
+
+
+if __name__ == '__main__':
+    unittest.main()
