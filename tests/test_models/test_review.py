@@ -1,41 +1,29 @@
 #!/usr/bin/python3
-"""
-Module documentation
-"""
-import unittest
-
+""" """
+from tests.test_models.test_base_model import test_basemodel
 from models.review import Review
 
-from models.base_model import BaseModel
 
+class test_review(test_basemodel):
+    """ """
 
-class TestReview(unittest.TestCase):
-    """Test cases Review class."""
+    def __init__(self, *args, **kwargs):
+        """ """
+        super().__init__(*args, **kwargs)
+        self.name = "Review"
+        self.value = Review
 
-    def test_instance(self):
-        """test instance."""
-        review = Review()
-        self.assertIsInstance(review, Review)
+    def test_place_id(self):
+        """ """
+        new = self.value()
+        self.assertEqual(type(new.place_id), str)
 
-    def test_is_class(self):
-        """test instance."""
-        review = Review()
-        self.assertEqual(str(type(review)),
-                         "<class 'models.review.Review'>")
-
-    def test_is_subclass(self):
-        """test is_subclass."""
-        review = Review()
-        self.assertTrue(issubclass(type(review), BaseModel))
+    def test_user_id(self):
+        """ """
+        new = self.value()
+        self.assertEqual(type(new.user_id), str)
 
     def test_text(self):
-        """test is_subclass."""
-        review = Review()
-        self.assertIsNotNone(review.id)
-        self.assertEqual(review.text, "")
-        self.assertEqual(review.user_id, "")
-        self.assertEqual(review.place_id, "")
-
-
-if __name__ == "__main__":
-    unittest.main()
+        """ """
+        new = self.value()
+        self.assertEqual(type(new.text), str)
