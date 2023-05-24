@@ -3,9 +3,9 @@
 from models.base_model import BaseModel
 
 
+
 class User(BaseModel):
     """User Object Management Class"""
-
     email = ""
     password = ""
     first_name = ""
