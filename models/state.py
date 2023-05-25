@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 """
-    Implementation of the State class
+State class from base model. 
 """
+
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """The states class"""
-    name= ""
+    """
+    State class
+    """
+    name = ""

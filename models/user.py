@@ -1,11 +1,15 @@
 #!/usr/bin/python3
-"""This Is A Module That Creates A Uaer Class"""
+"""
+defines user class from base model.
+"""
+
 from models.base_model import BaseModel
 
 
-
 class User(BaseModel):
-    """User Object Management Class"""
+    """
+    User class
+    """
     email = ""
     password = ""
     first_name = ""
