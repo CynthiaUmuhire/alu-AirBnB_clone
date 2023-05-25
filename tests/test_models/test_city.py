@@ -1,29 +1,37 @@
 #!/usr/bin/python3
-""" """
+"""
+Unittests for city
+"""
+
 import unittest
-from tests.test_models.test_base_model import TestBaseModel
+from models.base_model import BaseModel
 from models.city import City
 
+class TestCity(unittest.TestCase):
+    """ Tests the City Class """
 
-class TestCity(TestBaseModel):
-    """ """
+    def test_instance(self):
+        """ Tests instance """
+        obj = City()
+        self.assertIsInstance(obj, City)
 
-    def __init__(self, *args, **kwargs):
-        """ """
-        super().__init__(*args, **kwargs)
-        self.name = "City"
-        self.value = City
-
-    def test_state_id(self):
-        """ """
-        new = self.value()
-        self.assertEqual(type(new.state_id), str)
+    def test_is_subclass(self):
+        """tests the instance of sub classes"""
+        city = City()
+        self.assertTrue(issubclass(type(city), BaseModel))
 
     def test_name(self):
-        """ """
-        new = self.value()
-        self.assertEqual(type(new.name), str)
+        """tests name"""
+        city = City()
+        self.assertEqual(city.name, "")
+        city.name = "Kigali"
+        self.assertEqual(city.name, "Kigali")
+
+    def test_city_id(self):
+        """tests city id"""
+        city = City()
+        self.assertEqual(city.state_id, "")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
