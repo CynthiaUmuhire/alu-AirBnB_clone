@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """ """
-from tests.test_models.test_base_model import test_basemodel
+import unittest
+from tests.test_models.test_base_model import TestBaseModel
 from models.user import User
 
 
-class test_User(test_basemodel):
+class TestUser(TestBaseModel):
     """ """
 
     def __init__(self, *args, **kwargs):
@@ -32,3 +33,7 @@ class test_User(test_basemodel):
         """ """
         new = self.value()
         self.assertEqual(type(new.password), str)
+
+
+if __name__ == '__main__':
+    unittest.main()
