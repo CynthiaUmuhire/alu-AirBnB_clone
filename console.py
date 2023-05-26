@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines the console for our project.
+This module defines the console for our project
 """
 import cmd
 import models
