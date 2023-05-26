@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Amenity class from Base model
+The Amenity class is derived from the BaseModel class.
 """
 
 from models.base_model import BaseModel
@@ -8,6 +8,6 @@ from models.base_model import BaseModel
 
 class Amenity(BaseModel):
     """
-    Amenity class
+    The Amenity class is defined as a subclass of the BaseModel class in the models directory
     """
     name = ""

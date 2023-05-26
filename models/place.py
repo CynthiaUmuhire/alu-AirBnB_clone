@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Place class from base model.
+Place class: base model.
 """
 
 from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """ Place Model """
+    """ The Place Model """
     city_id = ""
     user_id = ""
     name = ""

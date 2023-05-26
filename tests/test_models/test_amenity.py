@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Unittest for amenity
+The unittest for amenity
 """
 
 import unittest

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-State class from base model.
+State class: base model.
 """
 
 from models.base_model import BaseModel
@@ -8,6 +8,6 @@ from models.base_model import BaseModel
 
 class State(BaseModel):
     """
-    State class
+    state class(BaseModel)
     """
     name = ""

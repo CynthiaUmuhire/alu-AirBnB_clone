@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is the base class for all models in the project.
+Project's base class for all models.
 """
 import uuid
 import models
@@ -9,12 +9,13 @@ from datetime import datetime
 
 class BaseModel:
     """
-    Defining Methods and attributes of the Basemodel class.
+    
+Basemodel class Defining methods and attributes.
     """
 
     def __init__(self, *args, **kwargs):
         """
-        Base model constructor
+        Base model constructor: Initializing the class
         """
         if kwargs:
             for key, value in kwargs.items():
@@ -30,14 +31,15 @@ class BaseModel:
 
     def save(self):
         """
-        Updates the updated_at attribute with a new value.
+        
+Updates updated_at attribute Assigns a new value
         """
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
         """
-        returns a copy of the instance dictionary
+        Returns instance dictionary copy.
         """
         dict_obj = self.__dict__.copy()
         dict_obj['__class__'] = self.__class__.__name__
@@ -47,7 +49,7 @@ class BaseModel:
 
     def __str__(self):
         """
-        String representation of the instance class
+        String representation instance class
         """
         class_name = self.__class__.__name__
         return f"[{class_name}] ({self.id}) {self.__dict__}"

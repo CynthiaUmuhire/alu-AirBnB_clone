@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Unittest for User Class."""
+"""The Unittest for User Class."""
 import unittest
 from models.user import User
 from models.base_model import BaseModel

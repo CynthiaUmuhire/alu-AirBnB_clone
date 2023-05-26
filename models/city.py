@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-City Class from base model.
+City Class base model.
 """
 
 from models.base_model import BaseModel
@@ -8,7 +8,7 @@ from models.base_model import BaseModel
 
 class City(BaseModel):
     """
-    City class
+    city class(BaseModel)
     """
     state_id = ""
     name = ""

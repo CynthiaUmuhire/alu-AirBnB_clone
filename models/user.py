@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-defines user class from base model.
+User Class Base model That create user class from base model.
 """
 
 from models.base_model import BaseModel
@@ -8,7 +8,7 @@ from models.base_model import BaseModel
 
 class User(BaseModel):
     """
-    User class
+    The User class
     """
     email = ""
     password = ""

@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Review class from base model.
+This Is The Review class from the base model.
 """
 
 from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-    """Review class Docs"""
+    """A Review Class Docs"""
     place_id = ""
     user_id = ""
     text = ""

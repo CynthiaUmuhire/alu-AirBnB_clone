@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Unittests for state class
+state class Unittests
 """
 
 import unittest

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Unittest for Place Class."""
+"""A Unittest for Place Class."""
 
 import unittest
 from models.place import Place
